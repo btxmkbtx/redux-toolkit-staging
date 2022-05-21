@@ -44,7 +44,7 @@ export const { add, sub } = counter.actions;
 */
 export const subAsync = (payload, time) => {
   console.log("异步action执行前payload:" + payload);
-  return async (dispatch) => {
+  return (dispatch) => {
     setTimeout(() => {
       dispatch(sub(payload));
     }, time);
